@@ -109,6 +109,15 @@ body {
   font-weight: normal;
 }
 
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+.section {
+  padding: 100px 0;
+}
+
 /* marquee */
 
 .line-banner {
@@ -145,4 +154,9 @@ body {
   100% {
     transform: translateX(-100%);
   }
+}
+
+main {
+  position: relative;
+  padding-top: var(--line-banner-height);
 }
