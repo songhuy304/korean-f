@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@font-face {
+  font-family: 'Bestime';
+  src:
+    url('./font/Bestime.otf') format('opentype'),
+    url('./font/Bestime.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+:root {
+  --font-title: 'Bestime', sans-serif;
+  --font-body: 'Noto Sans KR', sans-serif;
+
+  /* Color palette */
+  --sandy-brown: #ffa05c;
+  --powder-blue: #b8cff4;
+  --cornsilk: #fdf4d8;
+  --salmon-pink: #ff9999;
+
+  /* Color variations */
+  --sandy-brown-100: #ffd5b3;
+  --sandy-brown-200: #ffc699;
+  --sandy-brown-300: #ffb780;
+  --sandy-brown-400: #ffa05c;
+  --sandy-brown-500: #ff8c33;
+  --sandy-brown-600: #ff7700;
+
+  --powder-blue-100: #e8f0fb;
+  --powder-blue-200: #d1e1f7;
+  --powder-blue-300: #b8cff4;
+  --powder-blue-400: #9fbef0;
+  --powder-blue-500: #85acec;
+  --powder-blue-600: #6c9be8;
+
+  --cornsilk-100: #fffdf5;
+  --cornsilk-200: #fffaeb;
+  --cornsilk-300: #fff7e0;
+  --cornsilk-400: #fdf4d8;
+  --cornsilk-500: #f8ecc0;
+  --cornsilk-600: #f3e4a8;
+
+  --salmon-pink-100: #ffdddd;
+  --salmon-pink-200: #ffcccc;
+  --salmon-pink-300: #ffbbbb;
+  --salmon-pink-400: #ffaaaa;
+  --salmon-pink-500: #ff9999;
+  --salmon-pink-600: #ff7777;
+
+  --line-banner-height: 36px;
+}
+
+body {
+  font-family: var(--font-body);
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+.font-title {
+  font-family: var(--font-title);
+  font-weight: normal;
+}
+
+/* marquee */
+
+.line-banner {
+  white-space: nowrap;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: var(--line-banner-height);
+  overflow: hidden;
+  background: var(--sandy-brown-600);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 140%;
+  letter-spacing: 0.7px;
+  z-index: 1000;
+  padding: 8px 0;
+}
+
+.line-banner-inner {
+  display: inline-block;
+  animation: marquee 200s linear infinite;
+}
+
+.line-banner-inner span {
+  display: inline-block;
+  padding-right: 120px;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
