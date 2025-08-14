@@ -106,7 +106,6 @@ body {
 
 .font-title {
   font-family: var(--font-title);
-  font-weight: normal;
 }
 
 .container {
@@ -114,11 +113,13 @@ body {
   margin: 0 auto;
   padding: 0 16px;
 }
-.section {
-  padding: 100px 0;
+
+main {
+  position: relative;
+  padding-top: var(--line-banner-height);
 }
 
-/* marquee */
+/* ====================================== Line Banner ===================================== */
 
 .line-banner {
   white-space: nowrap;
@@ -156,7 +157,54 @@ body {
   }
 }
 
-main {
-  position: relative;
-  padding-top: var(--line-banner-height);
+/* ====================================== Main Content ===================================== */
+
+/* ====================================== Responsive Design ===================================== */
+
+/* Desktops and medium screens */
+@media screen and (max-width: 1440px) {
+  .container {
+    padding: 0 20px;
+  }
+
+  .hide-on-desktop {
+    display: none !important;
+  }
+}
+
+/* Tablets and small laptops */
+@media screen and (max-width: 1024px) {
+  .container {
+    padding: 0 16px;
+  }
+
+  .section {
+    padding: 80px 0;
+  }
+}
+
+/* Small tablets and large phones */
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 0 14px;
+  }
+
+  .section {
+    padding: 70px 0;
+  }
+
+  .hide-on-mobile {
+    display: none !important;
+  }
+}
+
+/* Mobile devices */
+@media screen and (max-width: 480px) {
+  .container {
+    padding: 0 12px;
+  }
+
+  .section {
+    padding: 60px 0;
+  }
 }
