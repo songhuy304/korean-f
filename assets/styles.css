@@ -303,7 +303,7 @@ body {
 .about-us-section .content__creator-list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
+  gap: 36px;
 }
 
 .creator-card {
@@ -376,49 +376,6 @@ body {
 .creator-card__social:hover {
   background: var(--powder-blue-200);
   transform: translateY(-2px);
-}
-
-/* ===== Responsive: Tablets (<=1024px) ===== */
-@media screen and (max-width: 1024px) {
-  .about-us-section .content__creator-list {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .creator-card__media {
-    height: 360px;
-  }
-}
-
-/* ===== Responsive: Phones (<=640px) ===== */
-@media screen and (max-width: 640px) {
-  .about-us-section .content__creator-list {
-    grid-template-columns: 1fr;
-  }
-
-  .creator-card__media {
-    height: 300px;
-  }
-
-  .creator-card__body {
-    padding: 14px;
-  }
-
-  .creator-card__footer {
-    gap: 12px;
-    padding: 10px 14px 14px;
-  }
-}
-
-@media screen and (max-width: 1024px) {
-  .creator-list {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media screen and (max-width: 640px) {
-  .creator-list {
-    grid-template-columns: 1fr;
-  }
 }
 
 /* ====================================== Header Styles ===================================== */
@@ -766,6 +723,18 @@ body {
   .sec-heading__desc {
     font-size: 1.125rem;
   }
+
+  .about-us-section .content__creator-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .creator-card__media {
+    height: 360px;
+  }
+
+  .creator-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media screen and (max-width: 991px) {
@@ -892,7 +861,6 @@ body {
     padding-bottom: 12px;
   }
 
-  /* Section heading responsive (phones <= 640px) */
   .sec-heading {
     margin-bottom: 16px;
   }
@@ -901,6 +869,27 @@ body {
   }
   .sec-heading__desc {
     font-size: 0.95rem;
+  }
+
+  .about-us-section .content__creator-list {
+    grid-template-columns: 1fr;
+  }
+
+  .creator-card__media {
+    height: 300px;
+  }
+
+  .creator-card__body {
+    padding: 14px;
+  }
+
+  .creator-card__footer {
+    gap: 12px;
+    padding: 10px 14px 14px;
+  }
+
+  .creator-list {
+    grid-template-columns: 1fr;
   }
 }
 
