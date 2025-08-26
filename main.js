@@ -59,30 +59,3 @@ function handleMenuMobile() {
     }
   });
 }
-
-function handleAnimeScroll() {
-  const $section = $('.section-truyen');
-  const $items = $('.section-truyen-inner__item');
-
-  // Tạo animation với autoplay: false
-  const animation = anime({
-    targets: $items.toArray(),
-    translateY: [0, '100%'],
-    easing: 'linear',
-    duration: 1000,
-    autoplay: false,
-  });
-
-  // Tính scroll progress của section (0 -> 1)
-  function getElementScrollProgress($el) {
-    const rect = $el[0].getBoundingClientRect();
-    const windowHeight = $(window).height();
-    const progress = 1 - rect.bottom / (rect.height + windowHeight);
-    return Math.min(Math.max(progress, 0), 1);
-  }
-
-  $(window).on('scroll', function () {
-    const progress = getElementScrollProgress($section);
-    animation.seek(animation.duration * progress);
-  });
-}
