@@ -147,7 +147,6 @@ body {
   font-size: 4rem;
   font-weight: 700;
   font-family: var(--font-title);
-  margin-bottom: 24px;
 }
 
 .sec-heading__desc {
@@ -155,6 +154,7 @@ body {
   font-weight: 400;
   font-family: var(--font-body);
   line-height: 100%;
+  padding-top: 24px;
 }
 
 /* @media (min-width: 1025px) {
@@ -233,39 +233,27 @@ body {
   max-width: 40%;
   height: auto;
   position: absolute;
-  top: 5%;
-  left: 30%;
+  top: 30%;
+  left: 50%;
   transform: translate(-50%, -50%);
   -webkit-animation: scale-in-center 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.4s both;
   animation: scale-in-center 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.4s both;
 }
 
-@-webkit-keyframes scale-in-center {
-  0% {
-    -webkit-transform: scale(0);
-    transform: scale(0);
-    opacity: 1;
-  }
-  100% {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-    opacity: 1;
-  }
-}
 @keyframes scale-in-center {
   0% {
-    -webkit-transform: scale(0);
-    transform: scale(0);
+    -webkit-transform: scale(0) translate(-50%, -50%);
+    transform: scale(0) translate(-50%, -50%);
     opacity: 0;
   }
   50% {
-    -webkit-transform: scale(1.2);
-    transform: scale(1.2);
+    -webkit-transform: scale(1.2) translate(-50%, -50%);
+    transform: scale(1) translate(-50%, -50%);
     opacity: 1;
   }
   100% {
-    -webkit-transform: scale(1);
-    transform: scale(1);
+    -webkit-transform: scale(1) translate(-50%, -50%);
+    transform: scale(1) translate(-50%, -50%);
     opacity: 1;
   }
 }
@@ -300,6 +288,106 @@ body {
   }
 }
 
+/* ====================================== Story Section ===================================== */
+
+.story-section {
+  background-color: var(--cornsilk-400);
+}
+.scroll-header {
+  position: relative;
+}
+
+.scroll-title-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.scroll-header .scroll-title {
+  text-align: center;
+  font-size: 5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-family: var(--font-title);
+  color: var(--sandy-brown-700);
+  max-width: 50rem;
+  letter-spacing: 1px;
+  line-height: 120%;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+/* Decorative elements positioning */
+.scroll-element {
+  position: absolute;
+  z-index: 1;
+  transition: all 0.3s ease;
+}
+
+.scroll-title-wrapper:hover .scroll-element {
+  opacity: 1;
+}
+
+.scroll-element-top-left {
+  top: -40px;
+  left: 15%;
+  max-width: 30%;
+  object-fit: cover;
+  transform: translateY(-50%) translateX(50%);
+}
+
+.scroll-element-left {
+  left: 0%;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 320px;
+  height: auto;
+}
+
+.scroll-element-right {
+  right: 5%;
+  top: 50%;
+  transform: translateY(-70%);
+  object-fit: cover;
+  max-width: 15%;
+}
+
+.scroll-element-bottom-right {
+  bottom: -20px;
+  right: 14%;
+  max-width: 10%;
+  object-fit: cover;
+  transform: scaleX(-1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .scroll-header .scroll-title {
+    font-size: 3rem;
+    max-width: 90%;
+  }
+
+  .scroll-element-top-left,
+  .scroll-element-bottom-right {
+    width: 60px;
+  }
+
+  .scroll-element-left,
+  .scroll-element-right {
+    width: 80px;
+  }
+
+  .scroll-element-left {
+    left: 2%;
+  }
+
+  .scroll-element-right {
+    right: 2%;
+  }
+}
+
 /* ====================================== Product Section ===================================== */
 
 section.product-section {
@@ -309,7 +397,6 @@ section.product-section {
 .product-section .hero-list-produts {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  margin-bottom: 50px;
 }
 
 .product-section .hero-list-produts .hero__item {
@@ -325,11 +412,14 @@ section.product-section {
 
 .product-section .hero-list-produts .hero__item-img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   transition:
     transform 0.35s ease,
     filter 0.35s ease;
+}
+
+.product-section .hero-list-produts .img_mb {
+  display: none;
 }
 
 .product-section .hero-list-produts .hero__item:hover {
@@ -403,6 +493,10 @@ section.product-section {
   padding: 10px 38px;
   border-radius: 6px;
   cursor: pointer;
+}
+
+.product-section .related-content.py-section {
+  padding-bottom: 0;
 }
 
 /* ====================================== About Us Section ===================================== */
@@ -932,31 +1026,6 @@ section.product-section {
   z-index: 10;
 }
 
-/* Utility Classes for Responsive Display */
-.hide-mobile {
-  display: none !important;
-}
-
-.hide-tablet {
-  display: none !important;
-}
-
-.hide-desktop {
-  display: none !important;
-}
-
-.show-mobile {
-  display: block !important;
-}
-
-.show-tablet {
-  display: block !important;
-}
-
-.show-desktop {
-  display: block !important;
-}
-
 /* ====================================== Header Styles ===================================== */
 
 #header {
@@ -1270,10 +1339,6 @@ section.product-section {
   .container {
     padding: 0 80px;
   }
-
-  .hide-on-desktop {
-    display: none !important;
-  }
 }
 
 /* Tablets and small laptops */
@@ -1284,6 +1349,15 @@ section.product-section {
 
   .section {
     padding: 80px 0;
+  }
+
+  .hero-jiho {
+    max-width: 40%;
+    top: 20%;
+  }
+
+  .hero-section {
+    background-image: url('./images/hero-section/hero-doc.png');
   }
 
   .nav-menu {
@@ -1370,10 +1444,6 @@ section.product-section {
     padding-right: 40px;
   }
 
-  .hero-section {
-    background-image: url('./images/hero-section/hero-doc.webp');
-  }
-
   .hero-section .sec-heading__desc {
     max-width: 20rem;
   }
@@ -1404,8 +1474,9 @@ section.product-section {
     padding: 0 20px;
   }
 
-  .hide-on-mobile {
-    display: none !important;
+  .hero-jiho {
+    max-width: 50%;
+    top: 20%;
   }
 
   .logo-img {
@@ -1466,6 +1537,14 @@ section.product-section {
     grid-template-columns: repeat(1, 1fr) !important;
   }
 
+  .product-section .hero-list-produts .img_mb {
+    display: block;
+  }
+
+  .hero__item:has(.img_mb) .hero__item-img:not(.img_mb) {
+    display: none;
+  }
+
   .footer .container .col-4 {
     width: 100%;
     padding: 0;
@@ -1488,6 +1567,11 @@ section.product-section {
   :root {
     --line-banner-height: 36px;
     --header-height: 56px;
+  }
+
+  .hero-jiho {
+    max-width: 70%;
+    top: 20%;
   }
 
   .line-banner {
@@ -1519,7 +1603,6 @@ section.product-section {
     width: 24px;
     height: 24px;
   }
-
   .py-section {
     padding-top: 40px;
     padding-bottom: 40px;
@@ -1537,6 +1620,7 @@ section.product-section {
 
   .about-us-section .content__creator-list {
     grid-template-columns: 1fr;
+    gap: 28px;
   }
 
   .creator-card__media {
