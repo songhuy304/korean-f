@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Jiho!</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="assets/styles.css" />
     <link rel="stylesheet" href="assets/atomic.css" />
   </head>
@@ -424,6 +425,156 @@
             </div>
           </section>
 
+          <section class="product-section py-section">
+            <div class="container">
+              <div class="sec-heading">
+                <h2 class="sec-heading__title">HERO PRODUCTS</h2>
+              </div>
+
+              <div class="hero-list-produts">
+                <div class="hero__item">
+                  <a href="/product">
+                    <img
+                      src="assets/images/products/hero-1.png"
+                      alt="hero-1"
+                      class="hero__item-img"
+                    />
+                  </a>
+                </div>
+
+                <div class="hero__item">
+                  <a href="/product">
+                    <img
+                      src="assets/images/products/hero-2.png"
+                      alt="hero-2"
+                      class="hero__item-img"
+                  /></a>
+                </div>
+
+                <div class="hero__item">
+                  <a href="/products">
+                    <img
+                      src="assets/images/products/hero-3.png"
+                      alt="hero-3"
+                      class="hero__item-img"
+                  /></a>
+                </div>
+              </div>
+
+              <div class="sec-heading">
+                <h2 class="sec-heading__title">RELATED PRODUCTS</h2>
+              </div>
+
+              <div class="swiper related-swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <article class="product-card">
+                      <div class="product-card__media">
+                        <img
+                          src="assets/images/products/pro-1.png"
+                          alt="Product"
+                          class="product-card__img"
+                        />
+                      </div>
+                      <div class="product-card__body">
+                        <h3 class="product-card__title">Nouilles ramen sachet boeuf</h3>
+                        <p class="product-card__desc">Stylish cafe chair</p>
+                      </div>
+                    </article>
+                  </div>
+
+                  <div class="swiper-slide">
+                    <article class="product-card">
+                      <div class="product-card__media">
+                        <img
+                          src="assets/images/products/pro-1.png"
+                          alt="Product"
+                          class="product-card__img"
+                        />
+                      </div>
+                      <div class="product-card__body">
+                        <h3 class="product-card__title">Nouilles ramen sachet boeuf</h3>
+                        <p class="product-card__desc">Stylish cafe chair</p>
+                      </div>
+                    </article>
+                  </div>
+
+                  <div class="swiper-slide">
+                    <article class="product-card">
+                      <div class="product-card__media">
+                        <img
+                          src="assets/images/products/pro-1.png"
+                          alt="Product"
+                          class="product-card__img"
+                        />
+                      </div>
+                      <div class="product-card__body">
+                        <h3 class="product-card__title">Gimbap burdock and tofu</h3>
+                        <p class="product-card__desc">Stylish cafe chair</p>
+                      </div>
+                    </article>
+                  </div>
+
+                  <div class="swiper-slide">
+                    <article class="product-card">
+                      <div class="product-card__media">
+                        <img
+                          src="assets/images/products/pro-1.png"
+                          alt="Product"
+                          class="product-card__img"
+                        />
+                      </div>
+                      <div class="product-card__body">
+                        <h3 class="product-card__title">Pancake kimchi</h3>
+                        <p class="product-card__desc">Stylish cafe chair</p>
+                      </div>
+                    </article>
+                  </div>
+
+                  <div class="swiper-slide">
+                    <article class="product-card">
+                      <div class="product-card__media">
+                        <img
+                          src="assets/images/products/pro-1.png"
+                          alt="Product"
+                          class="product-card__img"
+                        />
+                      </div>
+                      <div class="product-card__body">
+                        <h3 class="product-card__title">Corndog original</h3>
+                        <p class="product-card__desc">Stylish cafe chair</p>
+                      </div>
+                    </article>
+                  </div>
+
+                  <div class="swiper-slide">
+                    <article class="product-card">
+                      <div class="product-card__media">
+                        <img
+                          src="assets/images/products/pro-1.png"
+                          alt="Product"
+                          class="product-card__img"
+                        />
+                      </div>
+                      <div class="product-card__body">
+                        <h3 class="product-card__title">Nouilles ramen sachet boeuf</h3>
+                        <p class="product-card__desc">Stylish cafe chair</p>
+                      </div>
+                    </article>
+                  </div>
+                </div>
+
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-pagination"></div>
+              </div>
+
+              <div class="product-actions">
+                <a href="/products"> <button class="btn-more" type="button">Show More</button></a>
+              </div>
+            </div>
+          </section>
+
           <section id="about" class="about-us-section py-section">
             <div class="container">
               <div class="sec-heading">
@@ -770,9 +921,15 @@
       </div>
 
       <footer class="footer py-section">
-        <!-- Top Banner -->
-        <div class="footer-banner">
-          <div class="footer-banner-line"></div>
+        <!--  line footer -->
+
+        <div class="line-footer">
+          <img src="assets/icon/line-footer.svg" alt="Line Footer" class="line-footer__img" />
+          <img
+            src="assets/images/elements/hotdog.svg"
+            alt="Line Footer"
+            class="line-footer__hotdog"
+          />
         </div>
 
         <div class="container">
@@ -891,6 +1048,7 @@
       </footer>
     </main>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script type="module" src="main.js"></script>
   </body>
 </html>

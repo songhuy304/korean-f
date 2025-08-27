@@ -2,6 +2,7 @@ $(document).ready(function () {
   handleMenuMobile();
   handleHeaderShadow();
   handleScrollToSection();
+  initRelatedProductsSwiper();
 });
 
 // Function to handle header shadow on scroll
@@ -12,6 +13,25 @@ function handleHeaderShadow() {
     } else {
       $('#header').removeClass('shadow-sm');
     }
+  });
+}
+
+// Init Swiper for related products
+function initRelatedProductsSwiper() {
+  if (typeof Swiper === 'undefined') return; // Guard if CDN not loaded
+
+  new Swiper('.related-swiper', {
+    slidesPerView: 5,
+    spaceBetween: 24,
+    loop: true,
+
+    breakpoints: {
+      0: { slidesPerView: 1.5, spaceBetween: 14 },
+      480: { slidesPerView: 2.5, spaceBetween: 16 },
+      640: { slidesPerView: 2.5, spaceBetween: 18 },
+      768: { slidesPerView: 3, spaceBetween: 20 },
+      1024: { slidesPerView: 5, spaceBetween: 24 },
+    },
   });
 }
 
