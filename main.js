@@ -1,7 +1,7 @@
 $(document).ready(function () {
   handleMenuMobile();
   handleHeaderShadow();
-  handleAnimeScroll();
+  handleScrollToSection();
 });
 
 // Function to handle header shadow on scroll
@@ -11,6 +11,22 @@ function handleHeaderShadow() {
       $('#header').addClass('shadow-sm');
     } else {
       $('#header').removeClass('shadow-sm');
+    }
+  });
+}
+
+function handleScrollToSection() {
+  $('a[href^="#"]').on('click', function (e) {
+    e.preventDefault();
+
+    let target = $(this).attr('href');
+    let $target = $(target);
+
+    if ($target.length) {
+      window.scrollTo({
+        top: $target.offset().top,
+        behavior: 'smooth',
+      });
     }
   });
 }

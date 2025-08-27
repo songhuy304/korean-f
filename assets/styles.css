@@ -71,7 +71,8 @@ select {
   --sandy-brown-300: #ffb780;
   --sandy-brown-400: #ffa05c;
   --sandy-brown-500: #ff8833;
-  --sandy-brown-600: #ff710c;
+  --sandy-brown-600: #ff860c;
+  --sandy-brown-700: #ff710c;
 
   --powder-blue-100: #e5f4f2;
   --powder-blue-200: #d1e1f7;
@@ -161,7 +162,7 @@ body {
   width: 100%;
   height: var(--line-banner-height);
   overflow: hidden;
-  background: var(--sandy-brown-600);
+  background: var(--sandy-brown-700);
   color: #fff;
   font-size: 1.5rem;
   font-weight: 700;
@@ -218,10 +219,10 @@ body {
 }
 
 .hero-jiho {
-  width: min(48vw, 900px);
-  max-width: 100%;
+  max-width: 40%;
+  height: auto;
   position: absolute;
-  top: 2%;
+  top: 5%;
   left: 30%;
   transform: translate(-50%, -50%);
   -webkit-animation: scale-in-center 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.4s both;
@@ -530,6 +531,339 @@ body {
   opacity: 0.95;
 }
 
+/* ====================================== Footer Section ===================================== */
+.footer {
+  background-color: var(--cornsilk-400);
+}
+
+.footer.py-section {
+  padding-top: 80px;
+  padding-bottom: 40px;
+}
+
+.footer .container {
+  display: flex;
+  align-items: center;
+  padding-top: 40px;
+  position: relative;
+}
+
+.footer .container .col-4 {
+  width: 33.3333333333%;
+  padding: 0 20px;
+}
+
+/* Footer Banner */
+.footer-banner {
+  background-color: #ff6b35;
+  height: 8px;
+  position: relative;
+}
+
+.footer-banner-line {
+  background-color: #ff6b35;
+  height: 4px;
+  position: relative;
+  top: -2px;
+}
+
+.footer-banner-line::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 10px,
+    #ff6b35 10px,
+    #ff6b35 20px
+  );
+}
+
+.newsletter-title {
+  color: var(--sandy-brown-600);
+  font-size: 18px;
+  font-weight: bold;
+  text-align: left;
+  margin-bottom: 20px;
+  line-height: 1.4;
+  max-width: 300px;
+}
+
+.newsletter-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.newsletter-input {
+  padding: 16px 24px;
+  border: 2px solid var(--sandy-brown-600);
+  border-radius: 8px;
+  font-size: 14px;
+  background-color: transparent;
+}
+
+.newsletter-input::placeholder {
+  color: #626262;
+}
+
+.newsletter-form__bottom {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.newsletter-btn {
+  background-color: var(--sandy-brown-600);
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.newsletter-btn:hover {
+  background-color: var(--sandy-brown-700);
+}
+
+.checkbox-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.newsletter-checkbox {
+  width: 16px;
+  height: 16px;
+  margin-top: 2px;
+  accent-color: #ff6b35;
+}
+
+.checkbox-label > input[type='checkbox'] {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: relative;
+  border: 1px solid var(--sandy-brown-600);
+  background-color: transparent;
+  height: 16px;
+  width: 16px;
+  margin-right: 10px;
+  flex-shrink: 0;
+  margin-top: -1px;
+  transition: all 0.2s ease 0s;
+  cursor: pointer;
+  transform-origin: 0px 10px;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.checkbox-label input:checked ~ .checkmark {
+  background-color: var(--sandy-brown-600);
+  height: 16px;
+  width: 16px;
+  margin-right: 10px;
+  flex-shrink: 0;
+  margin-top: -1px;
+  transition: all 0.2s ease 0s;
+  cursor: pointer;
+  transform-origin: 0px 10px;
+  border-radius: 4px;
+  margin: -1px 10px 0px 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.checkmark:after {
+  content: '';
+  position: absolute;
+  display: none;
+}
+
+.checkbox-label input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.checkbox-label .checkmark:after {
+  left: 0.32em;
+  top: 0.18em;
+  width: 0.25em;
+  height: 0.5em;
+  border: solid white;
+  border-width: 0 0.15em 0.15em 0;
+  transform: rotate(45deg);
+  transition: all 500ms ease-in-out;
+}
+
+.checkbox-text {
+  font-size: 10px;
+  color: #666;
+  text-align: left;
+  line-height: 1.3;
+}
+
+/* Mascot Section */
+.mascot-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.mascot-image {
+  max-width: 60%;
+  height: auto;
+}
+
+/* Footer Navigation Section */
+.footer-nav-section {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.footer-nav {
+  display: flex;
+  gap: 40px;
+  justify-content: space-between;
+}
+
+.nav-column {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.nav-link {
+  color: var(--sandy-brown-600);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+.nav-link:hover {
+  color: var(--sandy-brown-300);
+}
+
+/* Social Media */
+.social-media {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  background-color: var(--sandy-brown-600);
+  border-radius: 50%;
+  color: white;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.social-icon:hover {
+  background-color: var(--sandy-brown-700);
+}
+
+.social-icon svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* Legal Links */
+.legal-links {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.legal-link {
+  text-decoration: none;
+  color: #000;
+  font-size: 16px;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.legal-link:hover {
+  color: #333;
+}
+
+.separator {
+  font-size: 14px;
+}
+
+/* Copyright */
+.copyright {
+  font-size: 14px;
+  margin-top: 12px;
+}
+
+/* Corndog Decoration */
+.corndog-decoration {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 10;
+}
+
+.corndog-image {
+  width: 80px;
+  height: auto;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer .container .col-4 {
+    width: 100%;
+    padding: 0;
+  }
+
+  .footer-nav {
+    justify-content: center;
+  }
+
+  .social-media {
+    justify-content: center;
+  }
+
+  .corndog-decoration {
+    position: static;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .newsletter-form__bottom {
+    flex-direction: column-reverse;
+  }
+}
+
 /* ====================================== Header Styles ===================================== */
 
 #header {
@@ -600,7 +934,7 @@ body {
   text-decoration: none;
   color: #141b34;
   font-weight: 500;
-  font-size: 1.25rem;
+  font-size: 1rem;
   transition:
     color 0.3s ease,
     transform 0.2s ease;
@@ -1027,6 +1361,14 @@ body {
   .sec-heading__desc {
     font-size: 1rem;
   }
+
+  .copyright {
+    text-align: center;
+  }
+
+  .legal-links {
+    justify-content: center;
+  }
 }
 
 @media screen and (max-width: 640px) {
@@ -1146,6 +1488,20 @@ body {
 
   .brand-card:hover {
     flex: auto;
+  }
+
+  .footer .container {
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+  }
+
+  .newsletter-form__bottom {
+    flex-direction: row;
+  }
+
+  .mascot-image {
+    max-width: 40%;
   }
 }
 
