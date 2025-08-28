@@ -323,24 +323,19 @@ body {
 .scroll-element {
   position: absolute;
   z-index: 1;
-  transition: all 0.3s ease;
-}
-
-.scroll-title-wrapper:hover .scroll-element {
-  opacity: 1;
 }
 
 .scroll-element-top-left {
-  top: -40px;
-  left: 15%;
+  top: -80px;
+  left: 20%;
   max-width: 30%;
   object-fit: cover;
   transform: translateY(-50%) translateX(50%);
 }
 
 .scroll-element-left {
-  left: 0%;
-  top: 50%;
+  left: -1%;
+  top: 5%;
   transform: translateY(-50%);
   width: 320px;
   height: auto;
@@ -348,7 +343,7 @@ body {
 
 .scroll-element-right {
   right: 5%;
-  top: 50%;
+  top: 12%;
   transform: translateY(-70%);
   object-fit: cover;
   max-width: 15%;
