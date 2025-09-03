@@ -235,7 +235,6 @@ body {
   position: absolute;
   top: 30%;
   left: 50%;
-  transform: translate(-50%, -50%);
   -webkit-animation: scale-in-center 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.4s both;
   animation: scale-in-center 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.4s both;
 }
@@ -244,17 +243,14 @@ body {
   0% {
     -webkit-transform: scale(0) translate(-50%, -50%);
     transform: scale(0) translate(-50%, -50%);
-    opacity: 0;
   }
   50% {
     -webkit-transform: scale(1.2) translate(-50%, -50%);
-    transform: scale(1) translate(-50%, -50%);
-    opacity: 1;
+    transform: scale(1.2) translate(-50%, -50%);
   }
   100% {
     -webkit-transform: scale(1) translate(-50%, -50%);
     transform: scale(1) translate(-50%, -50%);
-    opacity: 1;
   }
 }
 
@@ -1151,7 +1147,6 @@ section.product-section {
   display: none;
   flex-direction: column;
   cursor: pointer;
-  padding: 8px;
 }
 
 .hamburger {
@@ -1159,7 +1154,7 @@ section.product-section {
   display: flex;
   flex-direction: column;
   gap: 8px;
-  margin-right: 20px;
+  align-items: end;
 }
 
 .hamburger span {
@@ -1217,7 +1212,7 @@ section.product-section {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 3rem;
-  padding-bottom: 1rem;
+  padding-bottom: 0.4rem;
   border-bottom: 2px solid var(--sandy-brown-200);
 }
 
@@ -1278,10 +1273,6 @@ section.product-section {
   list-style: none;
   margin: 0;
   padding: 0;
-}
-
-.mobile-nav-menu li {
-  margin-bottom: 1.5rem;
 }
 
 .mobile-nav-menu li a {
@@ -1569,6 +1560,10 @@ section.product-section {
     top: 20%;
   }
 
+  .hero-section {
+    height: 70vh;
+  }
+
   .line-banner {
     font-size: 0.75rem;
   }
@@ -1583,7 +1578,6 @@ section.product-section {
 
   .mobile-menu-overlay {
     padding: 1rem;
-    padding-top: calc(var(--line-banner-height) + 1rem);
   }
 
   .mobile-nav-menu li a {
@@ -1707,7 +1701,6 @@ section.product-section {
 
   .mobile-menu-overlay {
     padding: 0.8rem;
-    padding-top: calc(var(--line-banner-height) + 0.8rem);
   }
 
   .mobile-nav-menu li a {
