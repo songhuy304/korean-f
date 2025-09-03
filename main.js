@@ -1,11 +1,10 @@
-import { hover, animate, spring } from 'https://cdn.jsdelivr.net/npm/motion@latest/+esm';
 
 $(document).ready(function () {
   handleMenuMobile();
   handleHeaderShadow();
   handleScrollToSection();
   initRelatedProductsSwiper();
-  onAnimationScrollSection();
+  onClickToRun();
 });
 
 // Function to handle header shadow on scroll
@@ -99,29 +98,22 @@ function handleMenuMobile() {
   });
 }
 
-function onAnimationScrollSection() {
-  const elementsJiro = document.querySelectorAll('.scroll-element');
-
-  elementsJiro.forEach(elementJiro => {
-    hover(elementJiro.closest('.scroll-title-wrapper'), () => {
-      animate(elementJiro, {
-        scale: [0, 1.2, 1],
-        rotate: [0, -5, 5, 0],
-      });
-
-      return () => {
-        animate(
-          elementJiro,
-          {
-            scale: 0,
-            rotate: 0,
-          },
-          {
-            duration: 0.4,
-            ease: 'easeIn',
-          }
-        );
-      };
+function onClickToRun() {
+    const el = document.querySelector(".jiro-start");
+    const el1List = document.querySelectorAll(".jiro-start-message");
+    el.addEventListener("click", () => {
+        if (el.classList.contains("run")) {
+            el.classList.remove("run");
+            el1List.forEach(element => {
+                element.classList.remove("run");
+            });
+        } else {
+            el.classList.add("run");
+            el1List.forEach(element => {
+                element.classList.add("run");
+            });
+        }
     });
-  });
 }
+
+
