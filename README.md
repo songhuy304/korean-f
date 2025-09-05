@@ -1,4 +1,4 @@
-# Jiho! - Korean Food Brand Websitee
+# Jiho! - Korean Food Brand Website
 
 Website chính thức của thương hiệu Jiho - một thương hiệu thực phẩm Hàn Quốc với thiết kế hiện đại và trải nghiệm người dùng tuyệt vời.
  
