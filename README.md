@@ -13,7 +13,7 @@ Jiho! là một website giới thiệu thương hiệu thực phẩm Hàn Quốc
 
 ## 🚀 Tính năng chính
 
-- **Responsive Design**: Tương thích với mọi thiết bị từ mobile đến desktop
+- **Responsive Design**: Tương thích với mọi thiết bị từ mobile đến dessktop
 - **Smooth Animations**: Sử dụng thư viện Motion để tạo hiệu ứng mượt mà
 - **Mobile Menu**: Menu điều hướng thân thiện với mobile
 - **Product Carousel**: Hiển thị sản phẩm với Swiper.js
