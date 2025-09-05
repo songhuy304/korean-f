@@ -445,8 +445,18 @@ html {
 
 .jiro-run:hover {
   animation-play-state: paused;
-  transform: scale(1.1) rotate(5deg);
-  filter: brightness(1.2) drop-shadow(0 5px 15px rgba(0, 0, 0, 0.3));
+  transform: scale(1.1) rotate(2deg);
+  filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.3));
+}
+
+.jiro-hover {
+  transition: all 0.7s ease;
+}
+
+.jiro-hover:hover {
+  animation-play-state: paused;
+  transform: scale(1.1) rotate(2deg);
+  filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.3));
 }
 
 .jiro-run-section__wrapper-end {
